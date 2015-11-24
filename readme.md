@@ -1,28 +1,48 @@
-## Laravel PHP Framework
+# Laravel Fresh Install
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+1. Generate new Application Key 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+  ``` php artisan generate:key ```
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+2. Default timezone: America/Sao_Paulo
+4. Set Application Name ( http://www.php-fig.org/psr/psr-4/ )
+  
+  ``` php artisan app:name BaseLaravel ```
 
-## Official Documentation
+5. Default template for maintenance mode responses can be found at resources/views/errors/503.blade.php
+6. !IMPORTANT! Routes defined using Route Partials (see Http/Routes/routes.php)  
+7. Basic Checkrole middleware added
+8. MUST delete the following files to avoid errors:
+  - Controllers/ExampleController.php
+  - Requests/ExampleRequest.php
+  - Models/Example.php
+  - Presenters/ExamplePresenter.php
+  - Repositories/ExampleRepository.php & ExampleRepositoryEloquent.php
+  - Transformers/ExampleTransformer.php
+  - Unbind the ExampleRepository and ExampleRepositoryEloquent in the Providers/RepositoryServiceProvider.php
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+# Repositories included
 
-## Contributing
+- Laravel 5 Repositories ( https://github.com/andersao/l5-repository )
+  - Fractal Presenter from PHPLeague ( http://fractal.thephpleague.com/ )
+- Scafold ( https://github.com/bestmomo/scafold )
+  - See ``` php artisan route:list ```
+- Subtree split of the Illuminate HTML component( https://github.com/illuminate/html )
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+# Other info
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-# Laravel Fresh Install 
+1. Global helper functions examples
+  - env('DB_DATABASE') to access .env file and show DB_DATABASE constant
+  - config('app.timezone') to access 'app' file and show timezone property, pass an array to set configuration values
+2. storage and bootstrap/cache directories MUST be writable by web server
+3. composer.json require
+```
+"require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.1.*",
+        "prettus/l5-repository": "^2.1",
+        "bestmomo/scafold": "dev-master",
+        "illuminate/html": "^5.0",
+        "league/fractal": "^0.13.0"
+    },
+```

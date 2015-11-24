@@ -1,16 +1,33 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
+/**
+* 1. Create a route partial file for each
+*    route group; store in 'Http/Routes' folder.
+* 3. Add the partial file basename to the
+*    partial map.
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/** Route Partial Map
+=================================================== */
+
+// ORDER MATTERS!
+$route_partials = [
+
+    'default'
+
+];
+
+/** Route Partial Loadup
+=================================================== */
+
+foreach ($route_partials as $partial) {
+
+$file = __DIR__.'/Routes/'.$partial.'.php';
+
+    if ( ! file_exists($file))
+{
+$msg = "Route partial [{$partial}] not found.";
+throw new \Illuminate\Filesystem\FileNotFoundException($msg);
+}
+
+require_once $file;
+}
