@@ -1,10 +1,14 @@
 # Laravel Fresh Install
 
-1. Generate new Application Key 
+1. Install dependencies and create your own copy of .env.examle (without the .example)
 
-  ``` php artisan generate:key ```
+  ``` composer install ```
 
-2. Default timezone: America/Sao_Paulo
+2. Generate new Application Key 
+
+  ``` php artisan key:generate ```
+
+3. Default timezone: America/Sao_Paulo
 4. Set Application Name ( http://www.php-fig.org/psr/psr-4/ )
   
   ``` php artisan app:name BaseLaravel ```
