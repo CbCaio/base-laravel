@@ -13,8 +13,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
-
+    'debug'           => env('APP_DEBUG', FALSE),
     /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -26,8 +25,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
-
+    'url'             => 'http://localhost',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -39,8 +37,7 @@ return [
     |
     */
 
-    'timezone' => 'America/Sao_Paulo',
-
+    'timezone'        => 'America/Sao_Paulo',
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -52,8 +49,7 @@ return [
     |
     */
 
-    'locale' => 'en',
-
+    'locale'          => 'en',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -66,7 +62,6 @@ return [
     */
 
     'fallback_locale' => 'en',
-
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -78,10 +73,8 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
-
-    'cipher' => 'AES-256-CBC',
-
+    'key'             => env('APP_KEY', 'SomeRandomString'),
+    'cipher'          => 'AES-256-CBC',
     /*
     |--------------------------------------------------------------------------
     | Logging Configuration
@@ -95,8 +88,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
-
+    'log'             => env('APP_LOG', 'single'),
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -108,7 +100,7 @@ return [
     |
     */
 
-    'providers' => [
+    'providers'       => [
 
         /*
          * Laravel Framework Service Providers...
@@ -136,7 +128,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * Application Service Providers...
          */
@@ -146,14 +137,13 @@ return [
         BaseLaravel\Providers\RouteServiceProvider::class,
         BaseLaravel\Providers\RepositoryServiceProvider::class,
         BaseLaravel\Providers\ValidatorServiceProvider::class,
-
         /*
          * Included in base-laravel
          */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
@@ -165,7 +155,7 @@ return [
     |
     */
 
-    'aliases' => [
+    'aliases'         => [
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
@@ -202,7 +192,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Html'      => Illuminate\Html\HtmlFacade::class,
         'Form'      => Illuminate\Html\FormFacade::class,
-        'Carbon'    => Carbon\Carbon::class
+        'Carbon'    => Carbon\Carbon::class,
+        'Image'     => Intervention\Image\Facades\Image::class,
 
     ],
 

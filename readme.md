@@ -33,6 +33,7 @@
 - Carbon ( https://github.com/briannesbitt/Carbon )
 - Illuminate/Html ( https://github.com/illuminate/html )
 - Laravel 5 Extended Generators ( https://github.com/laracasts/Laravel-5-Generators-Extended )
+- Intervention Image ( https://github.com/Intervention/image )
 
 # Other info
 
