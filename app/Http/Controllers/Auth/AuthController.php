@@ -3,6 +3,7 @@
 namespace BaseLaravel\Http\Controllers\Auth;
 
 use BaseLaravel\Models\User;
+use Carbon\Carbon;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -145,10 +146,8 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, User $user)
     {
-        $login_datetime   = new DateTime();
-        $user->last_login = $login_datetime->format('Y-m-d H:i:s');
+        $user->last_login = Carbon::now()->toDateTimeString();
         $user->save();
-
         return redirect()->intended($this->redirectPath());
     }
 
