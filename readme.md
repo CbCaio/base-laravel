@@ -1,29 +1,31 @@
 # Laravel Fresh Install
 
-1. Install dependencies and create your own copy of .env.examle (without the .example)
+1. Install dependencies, create copy of .env.examle (without the .example
 
-  ``` composer install ```
+``` 
+  composer install 
+```
 
 2. Generate new Application Key 
 
   ``` php artisan key:generate ```
 
-3. Default timezone: 'America/Sao_Paulo'
+3. Default timezone is set to: 'America/Sao_Paulo'
 4. Set Application Name ( http://www.php-fig.org/psr/psr-4/ )
   
   ``` php artisan app:name BaseLaravel ```
-
-5. Default template for maintenance mode responses can be found at resources/views/errors/503.blade.php
-6. !IMPORTANT! Routes defined using Route Partials (see Http/Routes/routes.php)  
-7. Basic Checkrole middleware added
-8. Authentication accepting login with username or email, based on Scafold package
-9. Publish vendors and generate laravel helpers 
+  Some files might not change at all, so, check changes manually before running things
+  
+5. !IMPORTANT! Routes defined using Route Partials (see Http/Routes/routes.php)  
+6. Basic Checkrole middleware added
+7. Authentication accepting login with username or email, based on Scafold package
+8. Publish vendors and generate laravel helpers 
 
 ```
-  php artisan vendor:publish
   php artisan clear-compiled
   php artisan ide-helper:generate
   php artisan ide-helper:meta
+  php artisan ide-helper:models
   php artisan optimize
 ```
 
