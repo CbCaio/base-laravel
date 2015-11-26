@@ -12,7 +12,8 @@
         "league/fractal": "^0.13.0",
         "nesbot/carbon": "^1.21",
         "intervention/image": "^2.3",
-        "cviebrock/eloquent-sluggable": "^3.1"
+        "cviebrock/eloquent-sluggable": "^3.1",
+        "barryvdh/laravel-ide-helper": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -40,7 +41,9 @@
             "php artisan optimize"
         ],
         "pre-update-cmd": [
-            "php artisan clear-compiled"
+            "php artisan clear-compiled",
+            "php artisan ide-helper:generate",
+            "php artisan optimize"
         ],
         "post-update-cmd": [
             "php artisan optimize"

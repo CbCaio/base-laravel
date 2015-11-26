@@ -16,15 +16,16 @@
 5. Default template for maintenance mode responses can be found at resources/views/errors/503.blade.php
 6. !IMPORTANT! Routes defined using Route Partials (see Http/Routes/routes.php)  
 7. Basic Checkrole middleware added
-8. Authentication accepting login with username or email, based on Scafold package 
-9. MUST delete the following files to avoid errors:
-  - Controllers/ExampleController.php
-  - Requests/ExampleRequest.php
-  - Models/Example.php
-  - Presenters/ExamplePresenter.php
-  - Repositories/ExampleRepository.php & ExampleRepositoryEloquent.php
-  - Transformers/ExampleTransformer.php
-  - Unbind the ExampleRepository and ExampleRepositoryEloquent in the Providers/RepositoryServiceProvider.php
+8. Authentication accepting login with username or email, based on Scafold package
+9. Publish vendors and generate laravel helpers 
+
+```
+  php artisan vendor:publish
+  php artisan clear-compiled
+  php artisan ide-helper:generate
+  php artisan ide-helper:meta
+  php artisan optimize
+```
 
 # Repositories included
 

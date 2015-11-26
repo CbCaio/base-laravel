@@ -28,9 +28,5 @@ class RepositoryServiceProvider extends ServiceProvider
             'BaseLaravel\Repositories\UserRepositoryEloquent'
         );
 
-        $this->app->bind(
-            'BaseLaravel\Repositories\ExampleRepository',
-            'BaseLaravel\Repositories\ExampleRepositoryEloquent'
-        );
     }
 }

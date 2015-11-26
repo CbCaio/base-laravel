@@ -4,10 +4,9 @@ namespace BaseLaravel\Http\Controllers\Auth;
 
 use BaseLaravel\Models\User;
 use Carbon\Carbon;
-use DateTime;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Validator;
+use Auth;
 use BaseLaravel\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -89,7 +88,6 @@ class AuthController extends Controller
         }
 
         $credentials = $this->getCredentials($request);
-
         if (Auth::attempt($credentials, $request->has('remember'))) {
             return $this->handleUserWasAuthenticated($request, $throttles);
         }
