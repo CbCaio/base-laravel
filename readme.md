@@ -34,6 +34,7 @@
 - Illuminate/Html ( https://github.com/illuminate/html )
 - Laravel 5 Extended Generators ( https://github.com/laracasts/Laravel-5-Generators-Extended )
 - Intervention Image ( https://github.com/Intervention/image )
+- Eloquent-Sluggable ( https://github.com/cviebrock/eloquent-sluggable )
 
 # Other info
 

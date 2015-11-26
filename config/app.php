@@ -143,6 +143,7 @@ return [
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
     ],
     /*
     |--------------------------------------------------------------------------
