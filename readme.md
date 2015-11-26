@@ -36,6 +36,7 @@
 - Laravel 5 Extended Generators ( https://github.com/laracasts/Laravel-5-Generators-Extended )
 - Intervention Image ( https://github.com/Intervention/image )
 - Eloquent-Sluggable ( https://github.com/cviebrock/eloquent-sluggable )
+  - Added doctrine/dbal: ~2.3 in order to generate automatic phpDocs for models 
 
 # Other info
 
