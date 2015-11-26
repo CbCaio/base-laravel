@@ -145,12 +145,12 @@ return [
         BaseLaravel\Providers\EventServiceProvider::class,
         BaseLaravel\Providers\RouteServiceProvider::class,
         BaseLaravel\Providers\RepositoryServiceProvider::class,
+        BaseLaravel\Providers\ValidatorServiceProvider::class,
 
         /*
          * Included in base-laravel
          */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        Bestmomo\Scafold\ScafoldServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
     ],
 

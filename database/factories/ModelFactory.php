@@ -13,9 +13,10 @@
 
 $factory->define(BaseLaravel\Models\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
+        'username' => $faker->userName,
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
+        'last_login' => $faker->dateTime,
         'remember_token' => str_random(10),
     ];
 });

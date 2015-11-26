@@ -15,5 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',['uses' => 'Auth\AuthController@test', 'as' => 'index']);
 

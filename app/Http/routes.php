@@ -12,7 +12,8 @@
 // ORDER MATTERS!
 $route_partials = [
 
-    'default'
+    'default',
+    'authenticate'
 
 ];
 

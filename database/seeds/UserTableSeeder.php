@@ -13,7 +13,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         factory(User::class)->create([
-            'name' => 'User',
+            'username' => 'user',
             'email' => 'user@user.com',
             'password' => bcrypt(123456),
             'remember_token' => str_random(10),
