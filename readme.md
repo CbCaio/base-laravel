@@ -37,14 +37,9 @@
 - Intervention Image ( https://github.com/Intervention/image )
 - Eloquent-Sluggable ( https://github.com/cviebrock/eloquent-sluggable )
   - Added doctrine/dbal: ~2.3 in order to generate automatic phpDocs for models 
+- DebugBar ( https://github.com/barryvdh/laravel-debugbar )
 
-# Other info
+# Other nice info to remember
 
-1. Global helper functions examples
-  - env('DB_DATABASE') to access .env file and show DB_DATABASE constant
-  - config('app.timezone') to access 'app' file and show timezone property, pass an array to set configuration values
-2. storage and bootstrap/cache directories MUST be writable by web server
-
-# Thanks to the following packages which helped me to build this
-
-- Scafold ( https://github.com/bestmomo/scafold )
+1. Global helper functions ( \vendor\laravel\framework\src\Illuminate\Foundation\helpers.php )
+2. storage and bootstrap/cache directories MUST be writable by the web server

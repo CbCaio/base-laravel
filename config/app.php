@@ -137,13 +137,12 @@ return [
         BaseLaravel\Providers\RepositoryServiceProvider::class,
         BaseLaravel\Providers\ValidatorServiceProvider::class,
         /*
-         * Included in base-laravel
+         * Included in base-laravel, check also AppServiceProvider for local-only providers
          */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class
     ],
     /*
     |--------------------------------------------------------------------------
@@ -195,6 +194,7 @@ return [
         'Form'      => Illuminate\Html\FormFacade::class,
         'Carbon'    => Carbon\Carbon::class,
         'Image'     => Intervention\Image\Facades\Image::class,
+        'Debugbar'  => Barryvdh\Debugbar\Facade::class,
 
     ],
 
