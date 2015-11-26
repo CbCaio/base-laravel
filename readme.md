@@ -31,7 +31,8 @@
 - Laravel 5 Repositories ( https://github.com/andersao/l5-repository )
   - Fractal Presenter from PHPLeague ( http://fractal.thephpleague.com/ )
 - Carbon ( https://github.com/briannesbitt/Carbon )
-- Subtree split of the Illuminate HTML component( https://github.com/illuminate/html )
+- Illuminate/Html ( https://github.com/illuminate/html )
+- Laravel 5 Extended Generators ( https://github.com/laracasts/Laravel-5-Generators-Extended )
 
 # Other info
 
@@ -41,4 +42,5 @@
 2. storage and bootstrap/cache directories MUST be writable by web server
 
 # Thanks to the following packages which helped me to build this
-    - Scafold ( https://github.com/bestmomo/scafold )
+
+- Scafold ( https://github.com/bestmomo/scafold )
