@@ -1,24 +1,31 @@
 # Laravel Fresh Install
 
-1. Install dependencies, create copy of .env.examle (without the .example
+
+1. Set Application Name & Fix namespaces ( http://www.php-fig.org/psr/psr-4/ )
+ 
+  ``` php artisan app:name BaseLaravel ```
+
+  Some files might not change at all, so, check changes manually before running things
+    - at config/repository.php fix rootNamespace
+    - at config/auth.php fix model
+    - at config/ide-helper.php fix interfaces
+    - at config/services.php fix stripe
+  
+  Or, delete and re-publish vendor config files
+  
+2. Create copy of env.examle (without the .example) & Generate new Application Key 
+
+  ``` php artisan key:generate ```
+  
+3. Install dependencies
 
 ``` 
   composer install 
 ```
-
-2. Generate new Application Key 
-
-  ``` php artisan key:generate ```
-
-3. Default timezone is set to: 'America/Sao_Paulo'
-4. Set Application Name ( http://www.php-fig.org/psr/psr-4/ )
-  
-  ``` php artisan app:name BaseLaravel ```
-  Some files might not change at all, so, check changes manually before running things
-  
+3. !INFO! Default timezone is set to: 'America/Sao_Paulo'
 5. !IMPORTANT! Routes defined using Route Partials (see Http/Routes/routes.php)  
-6. Basic Checkrole middleware added
-7. Authentication accepting login with username or email, based on Scafold package
+6. !INFO! Basic Checkrole middleware added
+7. !INFO! Authentication accepting login with username or email, based on Scafold package
 8. Publish vendors and generate laravel helpers 
 
 ```
